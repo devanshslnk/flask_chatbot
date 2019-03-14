@@ -2,7 +2,7 @@ from flask import Flask,jsonify,request
 import json 
 import requests
 
-page_access_token=''
+page_access_token='EAAflkbFOnB0BAPhzRqnNXUVzyVsVZAZBCPrgx7IdA4YHL2ZAn06e6oktwXQzZBtaQ2ef7oXCKegAcJZCZA0mZBjVmZANKza33hcWPhS8iW2Up5rEmhtLAZAeaAj6CkLbFvLMksi2LTWSJSGjlM5CNb3oAplp1u7G6Y1T4AKhdBFuTdgZDZD'
 app=Flask(__name__)
 @app.route('/',methods=['GET'])
 def handle_verification():
