@@ -35,14 +35,14 @@ def messaging_events(payload):
 
         
 def send_message(token,recipient,message):
-  reponse=requests.post("https://graph.facebook.com/v2.6/me/messages",
+  response=requests.post("https://graph.facebook.com/v2.6/me/messages",
     params={"access_token":token},
     data=json.dumps(
-      {"recipient":{"id":recipient}},
-      {"message":{"text":message.decode("unicode_escape")}
+      {"recipient":{"id":recipient},
+      "message":{"text":message.decode("unicode_escape")}
       }),
     headers={"Content-type":"application/json"})
-  if(r.status_code!=requests.codes.ok):
-    print(r.text)
+  if(response.status_code!=requests.codes.ok):
+    print(response.text)
 
 
