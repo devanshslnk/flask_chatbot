@@ -21,7 +21,7 @@ def handle_messges():
     print(payload)
     for sender,message in messaging_events(payload):
         print("%s:%s"%(sender,message))
-        send_message(PAT,sender,message)
+        send_message(page_access_token,sender,message)
     return "ok"
 
 def messaging_events(payload):
