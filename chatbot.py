@@ -18,7 +18,7 @@ def handle_verification():
 @app.route("/",methods=['POST'])
 def handle_messges():
     payload=request.get_data()
-    print(payload)
+    print("payload,"payload)
     for sender,message in messaging_events(payload):
         print("%s:%s"%(sender,message))
         send_message(page_access_token,sender,message)
